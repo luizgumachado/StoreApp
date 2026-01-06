@@ -7,9 +7,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class BluRay extends Product{
-    private String director;
+public class Cd extends Product{
+    private String artist;
     private int yearOfRelease;
-    private int durationMins;
     private String genre;
 }
