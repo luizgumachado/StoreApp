@@ -22,10 +22,7 @@ Utilizado para desacoplar a camada de persistência (Entidades) da camada de exi
 ### 2. Mapper Pattern
 Implementação manual de Mappers para converter Entidades em DTOs e vice-versa. Isso centraliza a lógica de transformação e mantém os Services limpos.
 
-### 3. Factory Method (GoF)
-Uma `ProductFactory` foi implementada para gerenciar a instanciação polimórfica de produtos, permitindo que a aplicação decida dinamicamente qual subclasse criar (Book, CD ou BluRay).
-
-### 4. Herança e Polimorfismo
+### 3. Herança e Polimorfismo
 * **Classe Abstrata `Product`**: Define o contrato e os atributos comuns, impedindo a criação de produtos genéricos.
 * **Polimorfismo de Conversão**: O método `convertToDto` utiliza `instanceof` para processar qualquer tipo de produto de forma genérica.
 
