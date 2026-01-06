@@ -12,8 +12,8 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class BluRayService {
-    BluRayRepository blurayRepository;
-    ProductMapper productMapper;
+    private final BluRayRepository blurayRepository;
+    private final ProductMapper productMapper;
 
     public List<BluRayDTO> findAll() {
         return blurayRepository.findAll().stream().map(productMapper::toBluRayDTO).toList();

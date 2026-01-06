@@ -12,8 +12,8 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class BookService {
-    BookRepository bookRepository;
-    ProductMapper productMapper;
+    private final BookRepository bookRepository;
+    private final ProductMapper productMapper;
 
     public List<BookDTO> findAll() {
         return bookRepository.findAll().stream().map(productMapper::toBookDTO).toList();

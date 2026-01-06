@@ -12,8 +12,8 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class CdService {
-    CdRepository cdRepository;
-    ProductMapper productMapper;
+    private final CdRepository cdRepository;
+    private final ProductMapper productMapper;
 
     public List<CdDTO> findAll() {
         return cdRepository.findAll().stream().map(productMapper::toCdDto).toList();
